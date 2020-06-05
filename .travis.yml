@@ -5,3 +5,14 @@ services:
 script:
     - docker build -t lukedesign/node .
     - docker images lukedesign/node
+
+before_deploy:
+    - docker login -u wuangyalin -p 1990gx...
+
+deploy:
+    provider: script
+    script: docker push lukedesign/node
+    on:
+        branch: master
+
+    
