@@ -7,7 +7,7 @@ script:
     - docker images lukedesign/node
 
 before_deploy:
-    - docker login -u wuangyalin -p 1990gx...
+    - docker login -u 'wuangyalin' -p '1990gx...'
 
 deploy:
     provider: script
